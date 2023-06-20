@@ -5,7 +5,8 @@
 
 
 .container {
-  background: linear-gradient(to the right, #e1b382, #c89666);
+  /* background: linear-gradient(to the right, #e1b382, #c89666); */
+  background-color: green;
   width : 100%;
   min-height: 100vh;
   display: flex;
@@ -24,7 +25,7 @@
 
 }
 .header h1 {
-   color: #fff;
+   color:white;
    text-align: center;
    margin: 30px 0;
 }
