@@ -4,21 +4,26 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 
 const App = () => {
-  // const [input, setInput] = useState("");
-  // const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState("");
+  const [todos, setTodos] = useState([]);
+
   return (
     <div className="container"> 
 
       <div className="app-wrapper">
         <div> <Header /></div>
-        {/* <div>
-          <Form
+        <div>
+          {/* <Form
             input={input}
             setInput={setInput}
             todos={todos}
             setTodos={setTodos}
+          /> */}
+          <Form
+            input12={input} 
+            setInput={setInput}
           />
-        </div> */}
+        </div>
       </div>
 
     </div>

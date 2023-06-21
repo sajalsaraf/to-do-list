@@ -1,33 +1,47 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const Form = ({ input, setInput, todos, setTodos }) => {
+// const Form = ({ input, setInput, todos, setTodos }) => {
+    const Form = ({input12,setInput}) => {
 
     const onInputChange = (event) => {
         setInput(event.target.value);
     };
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        setTodos([...todos, { id: uuidv4(), title: input, completed: false }]);
-        setInput("");
+    // const onFormSubmit = (event) => {
+    //     event.preventDefault();
+    //     setTodos([...todos, { id: uuidv4(), title: input, completed: false }]);
+    //     setInput("");
 
-    };
+    // };
     return (
-        <form onSubmit={onFormSubmit}>
+        // <form onSubmit={onFormSubmit}>
+        //     <input
+        //         type="text"
+        //         placeholder="Enter a todo..."
+        //         className="task-input"
+        //         value={input}
+        //         required
+        //         onChange={onInputChange}
+        //     />
+        //     <button className="button-add" type="submit">
+        //         Add
+        //     </button>
+        // </form>
+        // <div>gr</div>
+        <form>
             <input
-                type="text"
+                type="text" 
                 placeholder="Enter a todo..."
                 className="task-input"
-                value={input}
+                value={input12}
                 required
                 onChange={onInputChange}
             />
             <button className="button-add" type="submit">
                 Add
-            </button>
+             </button>
         </form>
-        // <div>gr</div>
 
 
     );
