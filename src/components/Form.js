@@ -1,48 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-// const Form = ({ input, setInput, todos, setTodos }) => {
-    const Form = ({input12,setInput}) => {
+const Form = ({ todos, setTodos }) => {
+    const [val, setValue] = useState(""); //value is stored in "val" -- value is updated by "setInput"
 
     const onInputChange = (event) => {
-        setInput(event.target.value);
+        setValue(event.target.value);
     };
 
-    // const onFormSubmit = (event) => {
-    //     event.preventDefault();
-    //     setTodos([...todos, { id: uuidv4(), title: input, completed: false }]);
-    //     setInput("");
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        setTodos([...todos, { id: uuidv4(), title: val, completed: false }]);
+        setValue("");
+    };
 
-    // };
+    console.log("val -- ",val)
+    console.log("todos -- ",todos)
     return (
-        // <form onSubmit={onFormSubmit}>
-        //     <input
-        //         type="text"
-        //         placeholder="Enter a todo..."
-        //         className="task-input"
-        //         value={input}
-        //         required
-        //         onChange={onInputChange}
-        //     />
-        //     <button className="button-add" type="submit">
-        //         Add
-        //     </button>
-        // </form>
-        // <div>gr</div>
-        <form>
+        // onSubmit is property of form and onFormSubmit function is called
+        <form onSubmit={onFormSubmit}> 
             <input
-                type="text" 
+                type="text"
                 placeholder="Enter a todo..."
                 className="task-input"
-                value={input12}
-                required
-                onChange={onInputChange}
+                value={val} // value is the variable to store the value on input box. "val" is the value stored.(argument)
+                required={true}
+                onChange={onInputChange} //onChange is the variable to store the function to be run whenever the "value" on inut box changes
             />
             <button className="button-add" type="submit">
                 Add
-             </button>
+            </button>
         </form>
-
 
     );
 };

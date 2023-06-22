@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import './App.css';
 import Form from "./components/Form";
 import Header from "./components/Header";
+// import Todoslist from "./components/Todolist";
 
 const App = () => {
-  const [input, setInput] = useState("");
+  
   const [todos, setTodos] = useState([]);
 
   return (
@@ -13,17 +14,16 @@ const App = () => {
       <div className="app-wrapper">
         <div> <Header /></div>
         <div>
-          {/* <Form
-            input={input}
-            setInput={setInput}
+          <Form
             todos={todos}
             setTodos={setTodos}
-          /> */}
-          <Form
+          />
+          {/* <Form
             input12={input} 
             setInput={setInput}
-          />
+          /> */}
         </div>
+        {/* <div> <Todoslist  todos={todos} setTodos={setTodos} /></div> */}
       </div>
 
     </div>
