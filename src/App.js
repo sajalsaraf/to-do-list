@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './App.css';
 import Form from "./components/Form";
 import Header from "./components/Header";
-// import Todoslist from "./components/Todolist";
+import Todoslist from "./components/Todolist";
 
 const App = () => {
   
@@ -23,7 +23,7 @@ const App = () => {
             setInput={setInput}
           /> */}
         </div>
-        {/* <div> <Todoslist  todos={todos} setTodos={setTodos} /></div> */}
+        <div> <Todoslist  todos={todos} setTodos={setTodos} /></div>
       </div>
 
     </div>

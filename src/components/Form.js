@@ -14,8 +14,6 @@ const Form = ({ todos, setTodos }) => {
         setValue("");
     };
 
-    console.log("val -- ",val)
-    console.log("todos -- ",todos)
     return (
         // onSubmit is property of form and onFormSubmit function is called
         <form onSubmit={onFormSubmit}> 
