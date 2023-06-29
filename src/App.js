@@ -18,10 +18,6 @@ const App = () => {
             todos={todos}
             setTodos={setTodos}
           />
-          {/* <Form
-            input12={input} 
-            setInput={setInput}
-          /> */}
         </div>
         <div> <Todoslist  todos={todos} setTodos={setTodos} /></div>
       </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
-const Form = ({ todos, setTodos }) => {
+const Form = (props) => {
     const [val, setValue] = useState(""); //value is stored in "val" -- value is updated by "setInput"
 
     const onInputChange = (event) => {
@@ -10,7 +10,7 @@ const Form = ({ todos, setTodos }) => {
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        setTodos([...todos, { id: uuidv4(), title: val, completed: false }]);
+        props.setTodos([...props.todos, { id: uuidv4(), title: val, completed: false }]);
         setValue("");
     };
 
